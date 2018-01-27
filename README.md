@@ -8,8 +8,8 @@
 
 - if you input snake_case, will return `camelCase`
 
-	- [implemented in php] (https://github.com/julie-oh/Algorithm_of_Julie/blob/master/php/camelCase.php)
+	- [implemented in php](https://github.com/julie-oh/Algorithm_of_Julie/blob/master/php/camelCase.php)
 
-- you can check with another Date range, will return conflicting Date range 
+- you can check with another Date range, will return conflicting `Date range` 
 
-	- [implemented in php] (https://github.com/julie-oh/Algorithm_of_Julie/blob/master/php/getConflictDateRange.php)
+	- [implemented in php](https://github.com/julie-oh/Algorithm_of_Julie/blob/master/php/getConflictDateRange.php)

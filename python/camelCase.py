@@ -1,5 +1,4 @@
 def getCamelCase(inputValue):
-
     # if first, end index is '_', let delete
     inputValue = inputValue.strip("_")
 
@@ -13,11 +12,10 @@ def getCamelCase(inputValue):
             reval += str(arr[i])
         else:
             reval += str(arr[i].capitalize())
+            
+    print(reVal)  # return value
 
-    print(reval)
-
-
-
+    
 if __name__ == "__main__":
     getCamelCase("_test_case_yeon_joo")
     getCamelCase("_test_case_yeon_joo_")

@@ -10,11 +10,11 @@ def getCamelCase(inputValue):
     for i, idx in enumerate(arr):
         arr[i] = arr[i].lower()
         if i == 0:
-            reVal += str(arr[i])
+            reval += str(arr[i])
         else:
-            reVal += str(arr[i].capitalize())
+            reval += str(arr[i].capitalize())
 
-    print(reVal)
+    print(reval)
 
 
 

@@ -29,3 +29,7 @@
 - sort Algorithm in reverse order
 
 	- [implement in python](python/reverse_sort.py)
+
+- create role game for that 'If I dream Director'
+
+    - [implement in python](python/audition_k_pop.py)

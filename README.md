@@ -26,9 +26,12 @@
 
 	- [implement in python](python/integer_filter.py)
 
-- sort Algorithm in reverse order
+- sort Algorithm
 
-	- [implement in python](python/reverse_sort.py)
+	- [implement in python](python/reverse_sort.py) - reverse sort
+	- [implement in python](python/bubble_sort.py) - bubble sort
+	- [implement in javascript](js/selectionsort.js) - selection sort
+	- [implement in javascript](js/bubblesort.js) - bubble sort
 
 - create role game for that 'If I dream Director'
 

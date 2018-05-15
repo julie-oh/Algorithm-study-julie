@@ -32,6 +32,9 @@
 	- [implement in python](python/bubble_sort.py) - bubble sort
 	- [implement in javascript](js/selectionsort.js) - selection sort
 	- [implement in javascript](js/bubblesort.js) - bubble sort
+	- [implement in python](python/strange_sort.py) - strange_sort(https://programmers.co.kr/learn/challenge_codes/95)
+    - [implement in javascript](js/strange_sort_js) - strange_sort(https://programmers.co.kr/learn/challenge_codes/95)
+    - [implement in python](python/rm_smallInt.py) - remove small int(https://programmers.co.kr/learn/challenge_codes/121 )
 
 - create role game for that 'If I dream Director'
 

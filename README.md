@@ -42,5 +42,5 @@
 
 - work out the problems in _Programer(https://programmers.co.kr/learn/courses/30/lessons/12908)_
  
-    - [implement in python](python/numPY.py)
-    - [implement in python](python/fibonacci.py)
+    - [implement in python](python/numPY.py) - compare to strings count
+    - [implement in python](python/fibonacci.py) - fibonacci Numbers

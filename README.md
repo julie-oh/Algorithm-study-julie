@@ -4,19 +4,19 @@
 
 	- [implement in python](python/snake_case.py)
 
-	- [implement in php](https://github.com/julie-oh/Algorithm_of_Julie/blob/master/php/underbarCase.php)
+	- [implement in php](php/underbarCase.php)
 
 
 - if you input snake_case, will return `camelCase`
 
-	- [implement in python](https://github.com/julie-oh/Algorithm_of_Julie/blob/master/python/camelCase.py)
+	- [implement in python](python/camelCase.py)
 	
-	- [implement in php](https://github.com/julie-oh/Algorithm_of_Julie/blob/master/php/camelCase.php)
+	- [implement in php](php/camelCase.php)
 	
 
 - you can check with another Date range, will return conflicting `Date range` 
 
-	- [implement in php](https://github.com/julie-oh/Algorithm_of_Julie/blob/master/php/getConflictDateRange.php)
+	- [implement in php](php/getConflictDateRange.php)
 
 - elevator Algorithm
 	
@@ -39,3 +39,8 @@
 - create role game for that 'If I dream Director'
 
     - [implement in python](python/audition_k_pop.py)
+
+- work out the problems in _Programer(https://programmers.co.kr/learn/courses/30/lessons/12908)_
+ 
+    - [implement in python](python/numPY.py)
+    - [implement in python](python/fibonacci.py)

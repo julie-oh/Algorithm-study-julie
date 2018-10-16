@@ -1,30 +1,30 @@
 /*
  *  implement Array in java
  */
-public class LinkedList {
+public class LinkedLists {
     private int data;
-    private LinkedList nextNode;
+    private LinkedLists nextNode;
 
     // constructer
-    public LinkedList(int data, LinkedList nextNode) {
+    public LinkedLists(int data, LinkedLists nextNode) {
         this.data = data;
         this.nextNode = nextNode;
     }
 
-    public LinkedList(int data) {
+    public LinkedLists(int data) {
         this(data, null);
     }
 
-    public LinkedList getNextNode() {
+    public LinkedLists getNextNode() {
         return nextNode;
     }
 
-    public void setNextNode(LinkedList nextNode) {
+    public void setNextNode(LinkedLists nextNode) {
         this.nextNode = nextNode;
     }
 
-    public LinkedList getNode(int idx) {
-        LinkedList currList = this;
+    public LinkedLists getNode(int idx) {
+        LinkedLists currList = this;
 
         for (int i = 0; i < idx + 1; i++) {
             currList = currList.getNextNode();
@@ -47,7 +47,7 @@ public class LinkedList {
             return;
         }
 
-        LinkedList currList = this;
+        LinkedLists currList = this;
 
         for (int i = 0; i < idx + 1; i++) {
             if (i == idx) {
@@ -62,16 +62,16 @@ public class LinkedList {
     }
 
     public void append(int data) {
-        LinkedList currNode = this;
+        LinkedLists currNode = this;
 
         while (currNode.getNextNode() != null) {
             currNode = currNode.getNextNode();
         }
 
-        currNode.setNextNode(new LinkedList(data));
+        currNode.setNextNode(new LinkedLists(data));
     }
 
-    public int getLength(LinkedList list) {
+    public int getLength(LinkedLists list) {
         int cnt = 0;
 
         while (list.getNextNode() != null) {
@@ -84,7 +84,7 @@ public class LinkedList {
         return cnt;
     }
 
-    public void printLength(LinkedList list) {
+    public void printLength(LinkedLists list) {
         int cnt = 0;
 
         while (list.getNextNode() != null) {
@@ -98,8 +98,8 @@ public class LinkedList {
     }
 
     //TODO
-    public LinkedList remove(int idx) {
-        LinkedList currList = this;
+    public LinkedLists remove(int idx) {
+        LinkedLists currList = this;
         int length = getLength(currList);
 
         if (idx == 0) {
@@ -113,8 +113,8 @@ public class LinkedList {
                 }
             }
         } else {
-            LinkedList strList = this;
-            LinkedList endList = this;
+            LinkedLists strList = this;
+            LinkedLists endList = this;
             for (int i = idx - 1; i < idx + 2; i++) {
                if (i == idx - 1) {
                    strList = currList;
@@ -138,7 +138,7 @@ public class LinkedList {
         sb.append(data);
         sb.append(",");
 
-        LinkedList getList = this.getNextNode();
+        LinkedLists getList = this.getNextNode();
 
         while (getList.getNextNode() != null) {
             sb.append(getList.getData());
@@ -152,7 +152,7 @@ public class LinkedList {
     }
 
     public static void main(String[] args) {
-        LinkedList list = new LinkedList(1);
+        LinkedLists list = new LinkedLists(1);
         list.append(2);
         list.append(3);
 

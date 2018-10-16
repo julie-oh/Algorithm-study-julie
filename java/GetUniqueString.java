@@ -35,7 +35,6 @@ public class GetUniqueString {
                 }
                 for (int j = i; i < cArr.length; j++) {
                     if (j == cArr.length - 1) {
-                        // cArr.remove(j);
                         break;
                     }
                     cArr[j] = cArr[j+1];

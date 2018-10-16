@@ -11,7 +11,6 @@ def getLand(list):
                 if loofBigVal < list[i][j] and j != indexNum:
                     loofBigVal = list[i][j]
                     indexNum = j
-        print(loofBigVal)
         sumVal += loofBigVal
 
     print(sumVal)

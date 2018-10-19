@@ -7,8 +7,9 @@
 import java.util.*;
 
 public class LinkedList_2_1 {
-    public void rmDuplication(LinkedList list) {
+    public LinkedList<Integer> rmDuplication(LinkedList list) {
         HashMap<Integer, Integer> hash = new HashMap<>();
+
         for (int i = 0; i < list.size(); i++) {
             int key = (Integer)list.get(i);
 
@@ -28,10 +29,12 @@ public class LinkedList_2_1 {
         }
 
         System.out.println(list);
+        return list;
     }
 
     public static void main(String[] args) {
         LinkedList<Integer> list = new LinkedList();
+
         list.add(1);
         list.add(2);
         list.add(3);

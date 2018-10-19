@@ -23,6 +23,10 @@ public class LinkedLists {
         this.nextNode = nextNode;
     }
 
+    public void setNextNode(boolean b) {
+        this.nextNode = null;
+    }
+
     public LinkedLists getNode(int idx) {
         LinkedLists currList = this;
 

@@ -1,43 +1,50 @@
 /*
- *  (!!!!!)don't modify index of list or array in for-loop
- *
- *   <2.4>
- *   You have two numbers represented by a linked list, where each node contains a single dligit.
- *   The digits are stored in reverse in reverse order, such that the 1's digit is at the head of the list.
- *   Write a function that adds the two numbers and returns the sum as a linked list.
- *
+ *  (*) if statement brace careful (ex. if (a) return a;)
  */
+
 import java.util.*;
 
 public class LinkedList_2_4 {
-    public LinkedList<Integer> getPartiton(LinkedList<Integer> list, int val) {
-        System.out.println('a');
+    public LinkedList<Integer> getList(final LinkedList<Integer> list, final LinkedList<Integer> list2) {
+        boolean isPlus = false;
+        LinkedList<Integer> reList = new LinkedList<>();
+
         for (int i = 0; i < list.size(); i++) {
-            if (list.get(i) < val) {
-                list.addFirst(list.get(i));
-                list.remove(i + 1);
+            int val = list.get(i) + list2.get(i);
+
+            if (isPlus) {
+                val += 1;
+                isPlus = false;
             }
+
+            if (val > 9) {
+                isPlus = true;
+                val -= 10;
+            }
+
+            reList.add(val);
         }
 
-        System.out.println(list.toString());
-        return list;
+        if (isPlus) {
+            reList.add(1);
+        }
+
+        System.out.println(reList);
+        return reList;
     }
 
-    public static void main(String[] arg) {
-        LinkedList<Integer> list = new LinkedList<Integer>();
-        list.add(1);
-        list.add(2);
-        list.add(11);
-        list.add(329);
-        list.add(102);
+    public static void main(String[] args) {
+        LinkedList_2_4 linkedlist = new LinkedList_2_4();
+        LinkedList<Integer> list = new LinkedList<>();
+        LinkedList<Integer> list2 = new LinkedList<>();
+        list.add(8);
         list.add(0);
-        list.add(-3);
-        list.add(0);
-        list.add(12);
-        list.add(5);
-        list.add(9);
+        list.add(8);
 
-        LinkedList_2_4 partition = new LinkedList_2_4();
-        partition.getPartiton(list, 11);
+        list2.add(5);
+        list2.add(9);
+        list2.add(1);
+
+        linkedlist.getList(list, list2);
     }
 }

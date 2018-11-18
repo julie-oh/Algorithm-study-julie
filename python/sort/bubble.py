@@ -15,5 +15,11 @@ def swap(arr, idx):
 
     return arr
 
+
 if __name__ == '__main__':
-    bubble([2, 3, 1, 10, 192, 191, 29, 21])
+    test_fname = 'test-set/sort_test_set.txt'
+    with open(test_fname, 'r') as testf:
+        lines = testf.readlines()
+        for line in lines:
+            int_arr = [int(s) for s in line.strip().split(',')]
+            bubble(int_arr)

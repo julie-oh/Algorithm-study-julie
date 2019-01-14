@@ -1,35 +1,36 @@
 def quicksort(arr):
-    return partion(0, arr)
+    if len(arr) <= 2:
+        if len(arr) == 2 and arr[0] > arr[1]:
+            arr[0], arr[1] = arr[1], arr[0]
+
+        return arr
+    else:
+        p = partion(0, arr)
+        return quicksort(arr[:p]) + [arr[p]] + quicksort(arr[p+1:])
+
 
 def partion(pivot, arr):
-    pivot_val = arr[pivot]
-    front = 0
-    end = len(arr) - 1
+    print(arr)
+    left = 0
+    right = len(arr) - 1
+    p = arr[pivot]
 
-    while not front == end:
-        front_flag = False
-        end_flag = False
+    while left <= right:
+        while left <= right and arr[left] <= p:
+            left += 1
 
-        while not (front_flag and end_flag) and not (front - end == 1):
-            if not front_flag:
-                if arr[front] > pivot_val:
-                    front_flag = True
-                else:
-                    front += 1
+        while left <= right and arr[right] > p:
+            right -= 1
 
-            if not end_flag:
-                if arr[end] < pivot_val:
-                    end_flag = True
-                else:
-                    end -= 1
+        if left < right:
+            arr[left], arr[right] = arr[right], arr[left]
 
+    arr[0], arr[right] = arr[right], arr[0]
 
-        arr[front], arr[end] = arr[end], arr[front]
+    #if right == len(arr) -1:
+     #   return right
 
-    return arr[:front], arr[front:]
-
-
-
+    return right
 
 if __name__ == '__main__':
     # testf_name = 'test-set/sort_test_set.txt'
@@ -40,5 +41,7 @@ if __name__ == '__main__':
     #         quicksort(int_arr)
 
     print(quicksort([5, 1, 7, 9, 3]))
+    print(quicksort([4,4,4,4,4,4]))
+    print(quicksort([99,10,0,1,2,34]))
 # 12, 323, 1, 10, 192, 191, 29, 21
 # -1, 291, 210, 11, 01, 2983, 1930

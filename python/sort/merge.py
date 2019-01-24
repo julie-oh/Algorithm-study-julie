@@ -16,7 +16,7 @@ def merge_sort(arr1, arr2):
     len1 = 0
     len2 = 0
     re_arr = []
-
+    print(arr1,arr2)
     while not (len(arr1) == len1 or len(arr2) == len2):
         if  arr2[len2] < arr1[len1]:
             re_arr.append(arr2[len2])

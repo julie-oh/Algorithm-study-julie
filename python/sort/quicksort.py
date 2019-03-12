@@ -10,7 +10,7 @@ def quicksort(arr):
 
 
 def partion(pivot, arr):
-    print(arr)
+    # print(arr)
     left = 0
     right = len(arr) - 1
     p = arr[pivot]

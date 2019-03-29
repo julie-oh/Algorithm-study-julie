@@ -33,12 +33,12 @@ def partion(pivot, arr):
     return right
 
 if __name__ == '__main__':
-    # testf_name = 'test-set/sort_test_set.txt'
-    # with open(testf_name, 'r') as testf:
-    #     lines = testf.readlines()
-    #     for line in lines:
-    #         int_arr = [int(s) for s in line.strip().split(',')]
-    #         quicksort(int_arr)
+    testf_name = 'test-set/sort_test_set.txt'
+    with open(testf_name, 'r') as testf:
+        lines = testf.readlines()
+        for line in lines:
+            int_arr = [int(s) for s in line.strip().split(',')]
+            quicksort(int_arr)
 
     print(quicksort([5, 1, 7, 9, 3]))
     print(quicksort([4,4,4,4,4,4]))

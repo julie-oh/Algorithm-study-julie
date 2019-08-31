@@ -14,7 +14,9 @@ public class LinkedList_2_5 {
             }
         }
 
-        System.out.println(re);
+//        System.out.println(re);
+        Tools.log(re);
+
         return re;
     }
     public static void main(String[] args) {

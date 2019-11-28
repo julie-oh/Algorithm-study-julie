@@ -22,6 +22,7 @@ def partition(pivot, arr):
             arr[left], arr[right] = arr[right], arr[left]
 
     arr[pivot], arr[right] = arr[right], arr[pivot]
+    print(arr)
     return right
 
 if __name__ == '__main__':

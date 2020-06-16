@@ -1,46 +1,39 @@
-"""
-    http://programmers.co.kr/learn/courses/30/lessons/42579?language=python3
-"""
 def solution(genres, plays):
-    # d = {a: {'total': '', max: [{'dd':'dd'}, {'aa':'cc'}]}}
+    answer = []
+    plays_dic = {}
+    genres_dic = {}
 
-    d = {}
+    for i, genre in enumerate(genres):
+        play = plays[i]
 
-    for i, g in enumerate(genres):
-        plays = plays[int(i)]
-
-        if g in d:
-            d[g]['total'] += plays
-
-            m_items = d['g']['max'].items()
-            if len(m_items) > 1:
-                is_update = False
-                waste_key = 0
-                for item in m_items:
-                    if is_update == False and item[0] < plays:
-                        waste_key = item[0]
-                    elif is_update == True and item[0] < plays:
-                        if item[0] < d[g]['max'][waste_key]:
-                            waste_key = item[0]
-            else:
-                d[g]['max'][plays] = i
+        if genre in genres_dic:
+            plays_dic[genre] += play
         else:
-            d[g] = {}
-            d[g]['total'] = plays
-            d[g]['max'] = [{plays: i}]
+            genres_dic[genre] = {}
+            plays_dic[genre] = play
 
-    print(d)
-    # order = []
-    # for item in d:
-    #     item = {item['total']: item}
-    #     for o in len(order):
+        if play in genres_dic[genre]:
+            continue
+        else:
+            genres_dic[genre][play] = i
+
+    print(plays_dic)
+    print(genres_dic)
+    sorted_plays = sorted(plays_dic.items(), key=lambda x: x[1], reverse=True)
+
+    for play in sorted_plays:
+        k = play[0]
+        sorted_genres = sorted(genres_dic[k], reverse=True)
+
+        answer.append(genres_dic[k][sorted_genres[0]])
+
+        if len(sorted_plays) > 1:
+            answer.append(genres_dic[k][sorted_genres[1]])
+
+    return answer
 
 
-
-# [classic, pop, classic, classic, pop]
-# [500, 600, 150, 800, 2500]
-# [4, 1, 3, 0]
-
+# {'classic': {'total_play': 1450, 'list': {500: 0, 150: 2, 800: 3}}, 'pop': {'total_play': 5600, 'list': {600: 1, 2500: 4}}}
 
 if __name__ == '__main__':
-    solution(['classic', 'pop', 'classic', 'classic', 'pop'], [500, 600, 150, 800, 2500])
+    solution(['classic', 'pop', 'classic', 'classic', 'pop', 'pop'], [500, 600, 150, 800, 2500, 2500])
